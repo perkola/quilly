@@ -1,0 +1,18 @@
+{
+    "name": "william/quilly",
+    "description": "Convert Quill Delta to HTML in Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Perkola",
+            "email": "perkola.william@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Perkola\\Quilly\\": "src/"
+        }
+    }
+}
