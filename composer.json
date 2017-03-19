@@ -1,5 +1,6 @@
 {
-    "name": "william/quilly",
+    "name": "perkola/quilly",
+    "keywords": ["Quill", "Delta", "Parsing"],
     "description": "Convert Quill Delta to HTML in Laravel",
     "license": "MIT",
     "authors": [
