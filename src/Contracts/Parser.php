@@ -44,7 +44,8 @@ class Parser
                 }
             } else {
                 $atoms = explode("\n", $op->insert);
-                $result = array_merge($result, $atoms);
+                $atoms = implode("<br>", $atoms);
+                $result[] = $atoms;
             }
         }
 
