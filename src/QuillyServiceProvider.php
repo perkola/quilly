@@ -3,6 +3,7 @@
 namespace Perkola\Quilly;
 
 use Illuminate\Support\ServiceProvider;
+use Perkola\Quilly\Contracts\Parser;
 
 class QuillyServiceProvider extends ServiceProvider
 {
@@ -14,7 +15,7 @@ class QuillyServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/quilly.php' => config_path('quilly.php'),
+            __DIR__ . '/../config/quilly.php' => config_path('quilly.php'),
         ]);
     }
 
@@ -25,6 +26,8 @@ class QuillyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('delta', function ($app) {
+            return new Parser();
+        });
     }
 }
