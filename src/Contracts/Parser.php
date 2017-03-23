@@ -51,4 +51,14 @@ class Parser
 
         return implode(" ", $result);
     }
+
+    public function plain($delta) {
+        $result = '';
+
+        foreach ($delta->ops as $op) {
+            $result .= $op->insert;
+        }
+
+        return $result;
+    }
 }
