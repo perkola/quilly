@@ -44,8 +44,13 @@ class Parser
                 }
             } else {
                 $atoms = explode("\n", $op->insert);
+                $last = array_pop($atoms);
+                echo $last . ' | ' . implode(", ", $atoms);
                 $atoms = implode("<br>", $atoms);
-                $result[] = $atoms;
+                if (!empty($atoms)) {
+                    $result[] = $atoms;
+                }
+                $result[] = $last;
             }
         }
 
